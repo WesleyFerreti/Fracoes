@@ -5,18 +5,15 @@
  */
 package tadfracoes;
 
-import java.util.Scanner;
-
 /**
  *
  * @author wesleyferreti
  */
 public class TADFracoes {
 
-
 	private int Numerador;
 	private int Denominador;
-        
+       
         
         private TADFracoes simplificar(TADFracoes s){// Sobreescrevendo a fração passada!
             
@@ -92,7 +89,7 @@ public class TADFracoes {
 		
 	}
        public TADFracoes(){
-           
+
        }
        
 
@@ -100,7 +97,7 @@ public class TADFracoes {
             return Numerador;
 	}
 
-	public void setNumerador(int numerador) {
+	private void setNumerador(int numerador) {
             this.Numerador = numerador;
 	}
 
@@ -108,7 +105,7 @@ public class TADFracoes {
             return Denominador;
 	}
 
-	public void setDenominador(int denominador) {
+	private void setDenominador(int denominador) {
             
             if (denominador < 1) {
                 
