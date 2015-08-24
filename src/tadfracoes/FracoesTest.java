@@ -16,14 +16,14 @@ public class FracoesTest {
 
 	public static void main(String[] args) {
             Scanner Tec = new Scanner(System.in);
-          
+            TADFracoes s;
             String Resp;
             int Quant,Op;
             try{
                 
             
             do{
-            System.out.println("Digite: \n\t1 para adição;\n\t2 para subitração;\n\t3 para multiplicação;\n\t4 para divisão;\n\t5 para simplificação;\n\t6 SAIR;");
+            System.out.println("Escolha: \n\t1 - adição;\n\t2 - subitração;\n\t3 - multiplicação;\n\t4 - divisão;\n\t5 - simplificação;\n\t6 - SAIR;");
             Op = Tec.nextInt();
             
             if(Op<5&&Op>0){
@@ -46,36 +46,37 @@ public class FracoesTest {
                             + "negativa basta colocar o numerador negativo.(o denominador informado foi convertido para o inverso do mesmo)");
                 vet[i] = new TADFracoes(n,Math.abs(d));
             }
+            s = vet[0];
             
             
             
             switch(Op){
                 case 1:
                      for(int i =1;i<vet.length;i++){
-                        vet[0].addTo(vet[i]);
+                        s.addTo(vet[i]);
                         
                     }
                     break;
                 case 2:
                     for(int i =1;i<vet.length;i++){
-                        vet[0].subTo(vet[i]);
+                        s.subTo(vet[i]);
                         
                     }
                     break;
                 case 3:
                     for(int i =1;i<vet.length;i++){
-                        vet[0].multTo(vet[i]);
+                        s.multTo(vet[i]);
                         
                     }
                     break;
                 case 4:
                     for(int i =1;i<vet.length;i++){
-                        vet[0].divTo(vet[i]);
+                        s.divTo(vet[i]);
                         
                     }
                     break;
             }
-            System.out.println("RESULTADO = "+ vet[0]);
+            System.out.println("RESULTADO = "+ s);
             }
             else if(Op==5){
                 System.out.println("Digite a Fração que deseja simplificar:");
@@ -102,11 +103,11 @@ public class FracoesTest {
             
             System.out.println("Byebye!");
             
-            }catch(ArithmeticException s){
+            }catch(ArithmeticException w){
                 System.out.println("Denominador não pode ser Zero!");
                 
             }
-            catch(Exception w){
+            catch(Exception ww){
                 System.out.println("Um erro ocorreu. Use apenas numeros inteiros.");
             }
 
